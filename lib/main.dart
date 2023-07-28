@@ -1,7 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:noteapp/models/data.dart';
 import 'package:noteapp/splash_screen.dart';
+import 'package:provider/provider.dart';
+
+import 'models/Note.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +17,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return ChangeNotifierProvider(create: (context) => Notedata(),
+    builder: (context, child) => const  MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
+    ),
     );
   }
 }

@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
  }
 
  void _NavigateHomepage(){
-  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => homepage()),
+  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()),
   );
  }
   @override
